@@ -2,28 +2,28 @@ import Config
 
 version = Mix.Project.config()[:version]
 
-config :elixir_boilerplate,
-  ecto_repos: [ElixirBoilerplate.Repo],
+config :elixir_practice,
+  ecto_repos: [ElixirPractice.Repo],
   version: version
 
 config :phoenix, :json_library, Jason
 
-config :elixir_boilerplate, ElixirBoilerplateWeb.Endpoint,
-  pubsub_server: ElixirBoilerplate.PubSub,
-  render_errors: [view: ElixirBoilerplateWeb.Errors, accepts: ~w(html json)]
+config :elixir_practice, ElixirPracticeWeb.Endpoint,
+  pubsub_server: ElixirPractice.PubSub,
+  render_errors: [view: ElixirPracticeWeb.Errors, accepts: ~w(html json)]
 
-config :elixir_boilerplate, ElixirBoilerplate.Repo,
+config :elixir_practice, ElixirPractice.Repo,
   migration_primary_key: [type: :binary_id, default: {:fragment, "gen_random_uuid()"}],
   migration_timestamps: [type: :utc_datetime_usec],
   start_apps_before_migration: [:ssl]
 
-config :elixir_boilerplate, Corsica, allow_headers: :all
+config :elixir_practice, Corsica, allow_headers: :all
 
-config :elixir_boilerplate, ElixirBoilerplate.Gettext, default_locale: "en"
+config :elixir_practice, ElixirPractice.Gettext, default_locale: "en"
 
-config :elixir_boilerplate, ElixirBoilerplateGraphQL, token_limit: 2000
+config :elixir_practice, ElixirPracticeGraphQL, token_limit: 2000
 
-config :elixir_boilerplate, ElixirBoilerplateWeb.Plugs.Security, allow_unsafe_scripts: false
+config :elixir_practice, ElixirPracticeWeb.Plugs.Security, allow_unsafe_scripts: false
 
 config :esbuild,
   version: "0.16.4",

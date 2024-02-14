@@ -1,6 +1,6 @@
 import Config
 
-config :elixir_boilerplate, ElixirBoilerplateWeb.Endpoint,
+config :elixir_practice, ElixirPracticeWeb.Endpoint,
   cache_static_manifest: "priv/static/cache_manifest.json",
   debug_errors: false
 
