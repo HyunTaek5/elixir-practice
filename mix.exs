@@ -80,7 +80,7 @@ defmodule ElixirPractice.Mixfile do
       {:gettext, "~> 0.22"},
 
       # Errors
-      {:sentry, "~> 9.1"},
+      {:sentry, "~> 10.2"},
 
       # Monitoring
       {:new_relic_agent, "~> 1.27"},
